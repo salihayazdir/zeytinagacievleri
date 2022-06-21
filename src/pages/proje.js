@@ -7,17 +7,19 @@ function Proje() {
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Proje Detayları
       </h1>
-      <div>
-        Vaziyet Planı
-      </div>
-      <div>
-        Galeri
-      </div>
-      <div>
-        Sosyal Alanlar
-      </div>
-      <div>
-        Kat Planları
+      <div className='flex flex-col gap-6'>
+        <div>
+          Vaziyet Planı
+        </div>
+        <div>
+          Galeri
+        </div>
+        <div>
+          Sosyal Alanlar
+        </div>
+        <div>
+          Kat Planları
+        </div>
       </div>
     </Layout>
   )

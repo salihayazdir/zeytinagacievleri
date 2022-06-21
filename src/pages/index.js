@@ -1,5 +1,8 @@
 import React from "react"
+import Home from "../components/Home"
 
-export default function Home() {
-  return <div>Hello world!</div>
+export default function IndexPage() {
+  return (
+      <Home/>
+  )
 }

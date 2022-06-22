@@ -9,9 +9,11 @@ function Layout({children}) {
   return (
     
     <Provider>
+      <div className='md:px-[15vw]'>
         <Header/>
         {children}
         <Footer/>
+      </div>
         <StickyNav/>
     </Provider>
   )

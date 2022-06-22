@@ -3,7 +3,7 @@ import { send } from '@emailjs/browser'
 
 function ContactForm() {
     const [formData, setFormData] = useState({ username: '', email: '',message: '', phone: '' })
-    const [formState, setFormState] = useState({isOpen: false, isSent: false, isFailed: false, isLoading: false})
+    const [formState, setFormState] = useState({ isSent: true, isFailed: true, isLoading: false})
 
     const handleChange = (e) => {
         setFormData(
@@ -13,26 +13,26 @@ function ContactForm() {
       }
     
     const handleSubmit =  (e) => {
-        const { username, email, message } = formData
+        const { username, email, message, phone } = formData
         e.preventDefault();
     
         send(
           process.env.GATSBY_EMAILJS_SERVICE_ID,
           process.env.GATSBY_EMAILJS_TEMPLATE_ID,
-          { username, email, message },
+          { username, email, message, phone },
           process.env.GATSBY_EMAILJS_PUBLIC_KEY,
          )
           .then((response) => {
             console.log('SUCCESS', response.status, response.text)
-            response.status === 200 && setFormState({...formState, isOpen: false, isLoading: false, isSent: true})
+            response.status === 200 && setFormState({...formState, isLoading: false, isSent: true})
           })
           .catch((err) => {
             console.log('FAIL', err)
-            setFormState({ ...formState, isOpen: false, isLoading: false, isSent: true, isFailed: true })
+            setFormState({ ...formState, isLoading: false, isSent: true, isFailed: true })
           })
 
-          setFormData({ username: '', email: '',message: '', })
-          setFormState({ ...formState, isOpen: false, isLoading: true })
+          setFormData({ username: '', email: '',message: '', phone: '' })
+          setFormState({ ...formState, isLoading: true })
     }
 
     const fieldStyles = 'py-2 border-b border-bej'
@@ -80,7 +80,7 @@ function ContactForm() {
                 //         x: { yoyo: Infinity, duration: 0.8, ease: 'easeInOut' },
                 //         y: { yoyo: Infinity, duration: 0.2, ease: [0.6, 0.01, -0.05, 0.95], } 
                 //     }}}
-                    >loading
+                    >Mesajınız Gönderiliyor...
                 </div>
             )}
 
@@ -92,15 +92,14 @@ function ContactForm() {
             // exit="exit"
             // className={`px-6 py-4 text-left text-2xl outline outline-2 outline-black bg-green-500 text-white ${formState.isFailed && 'bg-red-500'}`}
             >
-                <div>{!formState.isFailed ? ('Mesajınız iletildi. Kısa süre içinde sizler ile iletişim kuracağız.') : ('Bir hata meydana geldi.')}</div>
-                <button className='underline font-bold mt-2 uppercase'
-                onClick={() => setFormState({...formState, isOpen: true, isSent: false, isFailed: false})}>
-                    {!formState.isFailed ? 'Bir mesaj daha gönder.' : 'Tekrar Dene'}
+                <div className={`text-center font-bold p-6 rounded-md mt-4 text-white ${formState.isFailed ? 'bg-red-500' : 'bg-green-500' }`}>
+                {!formState.isFailed ? ('Mesajınız iletildi. Kısa süre içinde sizler ile iletişim kuracağız.') : ('Bir hata meydana geldi.')}</div>
+                <button className='w-full underline font-bold mt-2 uppercase'
+                onClick={() => setFormState({...formState, isSent: false, isFailed: false})}>
+                    {formState.isFailed && 'Tekrar Dene'}
                 </button>
             </div>
         )}
-
-        
     </div>
   )
 }

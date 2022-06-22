@@ -85,7 +85,7 @@ export default function Evler() {
             </Carousel.Item> ))}
         </Carousel> 
         <div className='grid gap-2 grid-cols-2 text-center'>
-          <div className={`py-2 bg-acikbej text-yesil font-bold rounded-md
+          <div className={`py-2 col-span-2 bg-acikbej text-yesil font-bold rounded-md
             ${tip.includes('t') && 'bg-yesil text-acikbej'}`}>
             {ikizTek(tip)}
           </div>
@@ -93,17 +93,17 @@ export default function Evler() {
             {tip.includes('t') ? '2 + 1' : '3 + 1'}
           </div>
           <div className='py-2 bg-slate-100 rounded-md'>
+            {`Kat Planı: ${katPlani(tip)}`}
+          </div>
+          <div className='py-2 bg-slate-100 rounded-md'>
             {`${metrekare(tip)} m2 (Net)`}
           </div>
           <div className='py-2 bg-slate-100 rounded-md'>
             {`${arsaalan} m2 Arsa`}
           </div>
-          <div className='py-2 bg-slate-100 rounded-md'>
-            {`Kat Planı: ${katPlani(tip)}`}
-          </div>
-          <div className='py-2 rounded-md font-bold'>
+          {/* <div className='py-2 rounded-md font-bold'>
             Kat Planları <IoArrowForward size='24' className='inline'/>
-          </div>
+          </div> */}
         </div>
       </div>)
     )
@@ -114,7 +114,7 @@ export default function Evler() {
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Evler
       </h1>
-      <div className='flex flex-col gap-4 px-6 py-4 bg-slate-100'>
+      <div className='flex flex-col gap-4 px-6 py-4 bg-slate-100 md:rounded-b-lg'>
         <h3 className='text-xl font-bold'>Filtreler</h3>
         <div className='flex gap-4 text-center'>
           <div className={`flex-1 bg-white px-6 py-4 rounded-md cursor-pointer
@@ -139,7 +139,7 @@ export default function Evler() {
           Temizle
         </div>
       </div>
-      <div className='grid grid-cols-1 gap-4 p-6 mt-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-6 mt-6'>
         {evler}
       </div>
     </Layout>

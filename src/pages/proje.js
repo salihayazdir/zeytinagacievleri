@@ -17,8 +17,8 @@ function Proje() {
           </p> */}
           <StaticImage className='' src="../images/proje/vaziyet.jpg" alt="vaziyet planı"/>
         </div>
-        <div className='text-2xl p-6 border-b border-bej text-center'>
-          <h2 className='font-bold text-xl text-left'>Kat Planları</h2>
+        <div className='text-2xl p-6 border-b border-bej font-bold text-yesil text-center'>
+          <h2 className='text-xl text-black text-left'>Kat Planları</h2>
           <hr className='mt-2 mb-10'/>
           <h3 className=''>İkiz Villa - Tip 1 - A</h3>
             <StaticImage className='' src="../images/katplanlari/kp-ikiz-zemin-a-sg.jpg" alt="vaziyet planı"/>

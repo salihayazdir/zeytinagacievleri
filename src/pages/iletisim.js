@@ -11,7 +11,7 @@ function Iletisim() {
       </h1>
       <div className='p-6 border-b border-bej'>
         {/* <p className='text-slate-500'>Proje detayları ve satış süreçleri hakkında bilgi almak için:</p> */}
-        <div className='text-xl text-yesil bg-slate-100 text-center py-4 rounded-md mt-4'>
+        <div className='text-xl text-yesil bg-slate-100 text-center md:text-left px-6 py-4 rounded-md mt-4'>
           <Link to='mailto:bilgi@zeytinagacievleri.com'>bilgi@zeytinagacievleri.com</Link>
         </div>
         <div className='flex gap-2 flex-col text-xl text-yesil bg-slate-100 p-6 rounded-md my-4'>

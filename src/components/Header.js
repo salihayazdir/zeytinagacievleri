@@ -7,8 +7,8 @@ export default function Header() {
   const{handleNavMenu} = useContext(Context)
 
   return (
-    <header className='mb-12 px-6 justify-center text-yesil border-b border-acikbej font-bold flex pt-6'>
-      <Link className='flex-[2]' to="/">
+    <header className='mb-12 px-6 align-bottom text-yesil border-b border-acikbej font-bold flex pt-6'>
+      <Link className='flex-[2] md:flex-[6]' to="/">
         Anasayfa
       </Link>
       <Link className='flex-1 flex justify-center -mb-10' to="/">
@@ -16,7 +16,7 @@ export default function Header() {
       </Link>
       <div
       onClick={handleNavMenu}
-      className='flex-[2] flex justify-end cursor-pointer'>
+      className='flex-[2] md:flex-[6] flex justify-end cursor-pointer'>
         Menü
       </div>
     </header>

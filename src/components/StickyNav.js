@@ -7,7 +7,7 @@ export default function StickyNav() {
   const{navMenu, handleNavMenu} = useContext(Context)
   return (
   <nav
-  className={`p-6 text-xl font-bold bg-acikbej border-t border-bej text-yesil sticky bottom-0
+  className={`p-6 md:px-[15vw] text-xl font-bold bg-acikbej border-t border-bej text-yesil sticky bottom-0
   ${navMenu && 'h-[85vh] '}`}>
     <ul className={`flex justify-around gap-4
     ${navMenu && 'flex-col text-center text-4xl gap-8 p-8'}`}>

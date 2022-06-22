@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Carousel from 'better-react-carousel'
 import { GatsbyImage, } from 'gatsby-plugin-image'
+import Carousel from 'better-react-carousel'
 
 export default function CarouselElement() {
 
@@ -27,7 +27,7 @@ export default function CarouselElement() {
   })
 
   return (
-    <Carousel containerClassName='mb-20' cols={1} rows={2} gap={10} loop>
+    <Carousel containerClassName='mb-10' cols={2} rows={1} gap={10} loop showDots>
       {carouselItems}
     </Carousel>
   )

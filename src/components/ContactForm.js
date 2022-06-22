@@ -38,7 +38,7 @@ function ContactForm() {
     const fieldStyles = 'py-2 border-b border-bej'
   
     return (
-        <div className='p-6'>
+    <div className='p-6'>
         <h2 className='text-xl font-bold'>İletişim Formu</h2>
         <p className='mt-2 text-slate-500'>
             Size en kısa süre içinde ulaşabilmemiz için iletişim formunu doldurarak bilgilerinizi iletebilirsiniz.
@@ -101,7 +101,7 @@ function ContactForm() {
         )}
 
         
-        </div>
+    </div>
   )
 }
 

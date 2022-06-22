@@ -7,7 +7,7 @@ import { FaSwimmingPool } from 'react-icons/fa'
 import { IoArrowForward } from 'react-icons/io5'
 
 
-function Evler() {
+export default function Evler() {
   const [poolFilter, setPoolFilter] = useState(false)
   const [typeFilter, setTypeFilter] = useState(null)
 
@@ -59,9 +59,9 @@ function Evler() {
 
     const katPlani = () => {
       if(tip.includes('1')) {
-        return 'A'
+        return 'Tip 1'
       } else {
-        return 'B'
+        return 'Tip 2'
       }     
     }
 
@@ -79,9 +79,9 @@ function Evler() {
           </div>}
         </div>
         <Carousel containerClassName='-mt-2 mb-2' gap={0} hideArrow={true} loop>
-          {edge.node.images && edge.node.images.map((x) => (
+          {edge.node.images && edge.node.images.map((x, i) => (
             <Carousel.Item>
-              <GatsbyImage image={x.gatsbyImageData} />
+              <GatsbyImage image={x.gatsbyImageData} alt={`ev-${i}`}/>
             </Carousel.Item> ))}
         </Carousel> 
         <div className='grid gap-2 grid-cols-2 text-center'>
@@ -145,5 +145,3 @@ function Evler() {
     </Layout>
   )
 }
-
-export default Evler

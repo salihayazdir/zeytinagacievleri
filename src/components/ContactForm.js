@@ -3,7 +3,7 @@ import { send } from '@emailjs/browser'
 
 function ContactForm() {
     const [formData, setFormData] = useState({ username: '', email: '',message: '', phone: '' })
-    const [formState, setFormState] = useState({ isSent: true, isFailed: true, isLoading: false})
+    const [formState, setFormState] = useState({ isSent: false, isFailed: false, isLoading: false})
 
     const handleChange = (e) => {
         setFormData(

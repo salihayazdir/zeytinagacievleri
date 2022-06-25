@@ -13,10 +13,9 @@ module.exports = {
   siteMetadata: {
     title: 'Avşa Zeytin Ağacı Evleri',
     author: 'Salih Ayazdır',
-  
-    
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

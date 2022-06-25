@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Carousel from 'better-react-carousel'
 import { FaSwimmingPool } from 'react-icons/fa'
-import { IoArrowForward } from 'react-icons/io5'
 
 
 export default function Evler() {

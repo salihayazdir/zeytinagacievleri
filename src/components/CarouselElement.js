@@ -27,7 +27,7 @@ export default function CarouselElement() {
   })
 
   return (
-    <Carousel containerClassName='mb-10' cols={2} rows={1} gap={10} loop showDots>
+    <Carousel containerClassName='mb-10' cols={1} rows={1} gap={0} loop showDots hideArrow={false}>
       {carouselItems}
     </Carousel>
   )

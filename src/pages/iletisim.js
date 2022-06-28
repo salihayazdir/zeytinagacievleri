@@ -2,10 +2,12 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import ContactForm from '../components/ContactForm'
 import { Link } from 'gatsby'
+import { AnimatePresence, motion } from 'framer-motion'
 
 function Iletisim() {
   return (
-    <>
+    <AnimatePresence>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
     <Helmet title={`İletişim - Avşa Zeytin Ağacı Evleri`}/>
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         İletişim
@@ -28,7 +30,8 @@ function Iletisim() {
         </div>
       </div>
       <ContactForm/>
-    </>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
+import { AnimatePresence, motion } from 'framer-motion'
 
 function Proje() {
   return (
-    <>
+    <AnimatePresence>
     <Helmet title={`Proje Detayları - Avşa Zeytin Ağacı Evleri`}/>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Proje Detayları
       </h1>
@@ -75,7 +77,8 @@ function Proje() {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
+    </AnimatePresence>
   )
 }
 

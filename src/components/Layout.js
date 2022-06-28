@@ -8,7 +8,7 @@ function Layout({children}) {
   return (
     
     <Provider>
-      <div className='md:px-[15vw]'>
+      <div className='md:px-[10vw]'>
         <Header/>
         {children}
         <Footer/>

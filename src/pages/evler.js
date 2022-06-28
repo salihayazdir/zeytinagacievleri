@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Carousel from 'better-react-carousel'
 import { FaSwimmingPool } from 'react-icons/fa'
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function Evler() {
   const [poolFilter, setPoolFilter] = useState(false)
@@ -109,8 +109,10 @@ export default function Evler() {
   })
 
   return (
-    <>
+    <AnimatePresence>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
     <Helmet title={`Evler - Avşa Zeytin Ağacı Evleri`}/>
+
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Evler
       </h1>
@@ -142,6 +144,8 @@ export default function Evler() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-6 mt-6'>
         {evler}
       </div>
-    </>
+    
+    </motion.div>
+    </AnimatePresence>
   )
 }

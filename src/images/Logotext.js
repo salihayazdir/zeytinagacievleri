@@ -5,7 +5,7 @@ export default function Logotext() {
   const logoVariants = {
     animate: {
       transition: {
-        staggerChildren: 0.03,
+        staggerChildren: 0.05,
       },
     },
   }

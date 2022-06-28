@@ -1,11 +1,12 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { Helmet } from 'react-helmet'
 import ContactForm from '../components/ContactForm'
 import { Link } from 'gatsby'
 
 function Iletisim() {
   return (
-    <Layout title='İletişim'>
+    <>
+    <Helmet title={`İletişim - Avşa Zeytin Ağacı Evleri`}/>
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         İletişim
       </h1>
@@ -27,7 +28,7 @@ function Iletisim() {
         </div>
       </div>
       <ContactForm/>
-    </Layout>
+    </>
   )
 }
 

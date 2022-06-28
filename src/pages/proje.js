@@ -1,10 +1,11 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { Helmet } from 'react-helmet'
 import { StaticImage } from 'gatsby-plugin-image'
 
 function Proje() {
   return (
-    <Layout title='Proje Detaylari'>
+    <>
+    <Helmet title={`Proje Detayları - Avşa Zeytin Ağacı Evleri`}/>
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Proje Detayları
       </h1>
@@ -74,7 +75,7 @@ function Proje() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

@@ -1,12 +1,13 @@
 import React from 'react'
 import CarouselElement from './CarouselElement'
-import Layout from './Layout'
 import Logotext from '../images/Logotext'
+import { Helmet } from 'react-helmet'
 
 export default function Home() {
   
   return (
-    <Layout title='Anasayfa'>
+    <>
+    <Helmet title={`Anasayfa - Avşa Zeytin Ağacı Evleri`}/>
       <div className='p-6 text-center flex flex-col justify-center'>
         <h1 className='text-5xl px-[25%] md:px-[40%] mb-8'>
           <Logotext/>
@@ -18,6 +19,6 @@ export default function Home() {
         </p> */}
       </div>
       <CarouselElement />
-    </Layout>
+    </>
   )
 }

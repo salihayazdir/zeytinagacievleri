@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Layout from '../components/Layout'
+import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Carousel from 'better-react-carousel'
@@ -109,7 +109,8 @@ export default function Evler() {
   })
 
   return (
-    <Layout title='Evler'>
+    <>
+    <Helmet title={`Evler - Avşa Zeytin Ağacı Evleri`}/>
       <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         Evler
       </h1>
@@ -141,6 +142,6 @@ export default function Evler() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-6 mt-6'>
         {evler}
       </div>
-    </Layout>
+    </>
   )
 }

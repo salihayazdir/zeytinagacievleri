@@ -1,10 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import Layout from '../components/Layout'
+import { Helmet } from 'react-helmet'
 
 function fourofour() {
   return (
-    <Layout title='404'>
+    <>
+    <Helmet title={`Sayfa Bulunamadı - Avşa Zeytin Ağacı Evleri`}/>
       <h1 className='mt-20 text-3xl text-center font-bold text-yesil'>
         Aradığınız Sayfa Bulunamadı.
       </h1>
@@ -13,7 +14,7 @@ function fourofour() {
         Anasayfaya Git
       </Link>
       </div>
-    </Layout>
+    </>
   )
 }
 

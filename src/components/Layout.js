@@ -13,7 +13,7 @@ function Layout({children}) {
         {children}
         <Footer/>
       </div>
-        <StickyNav/>
+        {/* <StickyNav/> */}
     </Provider>
   )
 }

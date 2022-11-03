@@ -22,7 +22,8 @@ export default function Home() {
         </p> */}
       </div>
       {/* <Slider/> */}
-      <CarouselElement />
+      {/* <CarouselElement /> */}
+      <div className='flex items-center justify-center mt-10 text-2xl text-yesil'>Çok yakında...</div>
     </motion.div>
     </AnimatePresence>
   )

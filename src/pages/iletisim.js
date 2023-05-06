@@ -9,24 +9,24 @@ function Iletisim() {
     <AnimatePresence>
     <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
     <Helmet title={`İletişim - Avşa Zeytin Ağacı Evleri`}/>
-      <h1 className='px-6 py-4 text-3xl font-bold text-center border-b text-yesil border-bej'>
+      <h1 className='text-3xl text-center text-yesil font-bold px-6 py-4 border-b border-bej'>
         İletişim
       </h1>
       <div className='p-6 border-b border-bej'>
         {/* <p className='text-slate-500'>Proje detayları ve satış süreçleri hakkında bilgi almak için:</p> */}
-        <div className='px-6 py-4 mt-4 text-xl text-center rounded-md text-yesil bg-slate-100 md:text-left'>
+        <div className='text-xl text-yesil bg-slate-100 text-center md:text-left px-6 py-4 rounded-md mt-4'>
           <Link to='mailto:bilgi@zeytinagacievleri.com'>bilgi@zeytinagacievleri.com</Link>
         </div>
-        <div className='flex flex-col gap-2 p-6 my-4 text-xl rounded-md text-yesil bg-slate-100'>
+        <div className='flex gap-2 flex-col text-xl text-yesil bg-slate-100 p-6 rounded-md my-4'>
           <h3 className='font-bold text-black'>Satış ve Tanıtım</h3>
           <hr/>
-          <p className='text-black'>Ertuğrul Erşan</p>
+          <p className='text-black'>Görsel Basmacı</p>
           <Link 
           to='mailto:gorsel.basmaci@zeytinagacievleri.com'
-          className='my-2 leading-6 '>
-            ertugrul.ersan@<br/>zeytinagacievleri.com
+          className=' leading-6 my-2'>
+            gorsel.basmaci@<br/>zeytinagacievleri.com
           </Link>
-          <Link to='tel:+905301428992'>0537 418 2737</Link>
+          <Link to='tel:+905301428992'>0530 142 8992</Link>
         </div>
       </div>
       <ContactForm/>

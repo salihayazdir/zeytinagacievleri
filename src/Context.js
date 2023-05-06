@@ -6,7 +6,7 @@ export const Provider = ({ children }) => {
 
     const [navMenu, setNavMenu] = useState(false)
 
-    const handleNavMenu = (x) => setNavMenu(x)
+    const handleNavMenu = () => setNavMenu((prev) => !prev)
 
     return <Context.Provider 
     value={{

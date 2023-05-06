@@ -3,7 +3,6 @@ import CarouselElement from './CarouselElement'
 import Logotext from '../images/Logotext'
 import { Helmet } from 'react-helmet'
 import { AnimatePresence, motion } from 'framer-motion'
-import Slider from './Slider'
 
 export default function Home() {
   
@@ -22,8 +21,7 @@ export default function Home() {
         </p> */}
       </div>
       {/* <Slider/> */}
-      {/* <CarouselElement /> */}
-      <div className='flex items-center justify-center mt-10 text-2xl text-yesil'>Çok yakında...</div>
+      <CarouselElement />
     </motion.div>
     </AnimatePresence>
   )

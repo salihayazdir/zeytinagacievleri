@@ -47,7 +47,7 @@ export default function StickyNav() {
         </motion.li>
       </motion.ul>
       {navMenu && <motion.button layout
-      className='opacity-80 absolute top-4 right-4'
+      className='absolute opacity-80 top-4 right-4'
       onClick={handleNavMenu}>
         <IoClose size='30'/>
       </motion.button>}
